@@ -5,9 +5,28 @@
   </head>
   <body>
     <a-scene>
+      <a-assets>
+        <img id="bg" src="https://cdn.glitch.global/0f142efb-f0be-4131-a5d1-3289c86b50be/valentine-bg.jpg?v=1641469347339"/>
+        <img
+          id="ourPic1"
+          src="https://cdn.glitch.global/0f142efb-f0be-4131-a5d1-3289c86b50be/oziel-gomez-L8-0SAy-aoQ-unsplash.jpg?v=1641538122655"
+        />
+        <img
+          id="ourPic2"
+          src="https://cdn.glitch.global/0f142efb-f0be-4131-a5d1-3289c86b50be/everton-vila-AsahNlC0VhQ-unsplash.jpg?v=1641538122750"
+        />
+        <video 
+          id="vid"
+          src="https://cdn.glitch.global/0f142efb-f0be-4131-a5d1-3289c86b50be/video.mp4?v=1641485099592"
+          loop="true"
+          autoplay>
+        </video>
+      </a-assets>
+      
+      
       <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
 
-      <a-sky color="red"></a-sky>
+      <a-sky src="#bg"></a-sky>
       
 <!--       Gallery -->
       <a-entity id="wallGallery1" position="0 0 -20">
@@ -22,6 +41,20 @@
         <a-box color="pink" height="5" width="20">
         </a-box>
       </a-entity>
+      
+      <a-entity id="imageGallery" position="0 1 -19">
+        <a-entity>
+          <a-text value="Really Miss You ;-;" color="#000" position="-1 1 0"></a-text>
+          <a-image src="#ourPic1" width="3" height="1.5"></a-image>
+        </a-entity>
+        <a-entity position="4 0 0">
+          <a-image src="#ourPic2" width="3" height="1.5"></a-image>
+        </a-entity>
+        <a-entity position="-4 0 0">
+          <a-video src="#vid" width="3" height="1.5"></a-video>
+        </a-entity>
+      </a-entity>
+      
       
 <!--    floor    -->
       <a-plane color="white" width="100" height="100" rotation="-90 0 0" position="0 -2 0"></a-plane>
